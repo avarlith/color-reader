@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.get-color {
+  width: 30%;
+  float: left;
+}
+
+form {
+  padding-top: 25px;
+}
+
+.display-color {
+  float: left;
+}
+
+.visual-color {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  float: left;
+}
+
+.format-color {
+  padding: 25px 0 0 25px;
+  float: left;
+}
