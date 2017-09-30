@@ -2,13 +2,32 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.get-color {
-  width: 30%;
-  float: left;
+form {
+  padding-top: 20px;
 }
 
-form {
-  padding-top: 25px;
+.main {
+  margin-left: 25px;
+}
+
+.alert {
+  background: pink;
+}
+
+.hidden {
+  display: none;
+}
+
+.alert-info {
+  padding-left: 15px;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.get-color {
+  width: 25%;
+  float: left;
 }
 
 .display-color {

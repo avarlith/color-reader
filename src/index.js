@@ -27,10 +27,10 @@ class ColorReader extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <h1>Color Reader</h1>
         <GetColor onClick={this.handleSubmit} />
-        <DisplayColor background={this.state.background} hexCode={this.state.hexCode} rgbCode={this.state.rgbCode} hslCode={this.state.hslCode} />
+        <DisplayColor background={this.state.background} hexCode={this.state.hexCode} hslCode={this.state.hslCode} rgbCode={this.state.rgbCode}/>
       </div>
     );
   }

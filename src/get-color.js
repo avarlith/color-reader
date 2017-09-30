@@ -5,12 +5,18 @@ import { isValidForm } from './validation.js';
 export class GetColor extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isActive: true
+    }
     this.handleGetColor = this.handleGetColor.bind(this);
   }
 
   handleGetColor(e) {
     e.preventDefault();
     const color = this.input.value;
+    this.setState({
+      isActive: true
+    })
     if (isValidForm(color)) {
       let hex, hsl, rgb;
       if (color.indexOf('rgb') > -1) {
@@ -28,7 +34,9 @@ export class GetColor extends React.Component {
       }
       this.props.onClick(color, hex, hsl, rgb);
     } else {
-      return alert('INCORRECT FORMAT');
+      return this.setState({
+        isActive: false
+      });
     }
   }
 
@@ -45,8 +53,11 @@ export class GetColor extends React.Component {
               </ul>
             </label>
           </div>
-          <input ref={(input) => this.input = input} />
+          <input type="text" className={!this.state.isActive ? "alert" : null} ref={(input) => this.input = input} />
           <button onClick={this.handleGetColor}>Display color</button>
+          <div className={this.state.isActive ? "hidden" : null}>
+            <p className="alert-info">incorrect data</p>
+          </div>
         </form>
       </div>
     )
